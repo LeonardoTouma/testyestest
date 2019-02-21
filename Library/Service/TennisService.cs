@@ -18,7 +18,8 @@ namespace Library.Service
         }
         public string Game()
         {
-            List<string> n = new List<string>() { "häst", "get", "apa", "ko", "tiger", "Fredrik", "guldfisk", "ozelot" };
+            List<string> n = new List<string>()
+            { "häst", "get", "apa", "ko", "tiger", "Fredrik", "guldfisk", "ozelot" };
             var WhatToRemove = 0;
             int number = 0;
             while (n.Count > 0)
@@ -29,7 +30,6 @@ namespace Library.Service
                 {
                     case 0:
                         number--;
-                        //NumberOfPlayers.RemoveAt(WhatToRemove);
                         return "";
                     case 1:
                         var olik = WhatToRemove = (n.Count - 1) / 2;
@@ -37,8 +37,7 @@ namespace Library.Service
                         {
                             number++;//temp
                         }
-                        //NumberOfPlayers.RemoveAt(WhatToRemove);
-                        return $"Removed: {n[0]}";
+                        return $"Removed and added a temp: {n[0]}";
                     default:
                         //not possible
                         //if (kill yourself)
@@ -49,7 +48,7 @@ namespace Library.Service
             }
             if (n.Count == 0)
             {
-                return $"No one left: {n.Select(x => x).ToString()}";
+                return $" One left: {n.Select(x => x).ToString()}";
             }
             else if (n.Count == 2 && n[1] == "temp")
             {
@@ -71,7 +70,7 @@ namespace Library.Service
         public void update(TennisEntity tennisPlayer)
         {
             var updatedTennisPlayer = new TennisModel()
-            { Id = tennisPlayer.Id, Country = tennisPlayer.Country, Name = tennisPlayer.Name };
+            {Id = tennisPlayer.Id, Country = tennisPlayer.Country, Name = tennisPlayer.Name};
         }
     }
 }
