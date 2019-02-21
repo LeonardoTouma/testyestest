@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Test.Interface;
+using System.Text;
 using Test.Models;
 
-namespace Test.Repositories
+namespace Repository104.Repositories
 {
-    public class TennisRepository : ITennisRepository
+    class TennisRepository
     {
         public TennisRepository()
         {
 
         }
         //DB
-
-
         public List<TennisModel> tennisPlayers()
         {
             List<TennisModel> TennisPlayers = new List<TennisModel>()

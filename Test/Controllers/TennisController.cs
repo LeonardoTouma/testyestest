@@ -9,7 +9,6 @@ using Test.Models;
 
 namespace Test.Controllers
 {
-
     [Route("api/[controller]")]
     [ApiController]
     public class TennisController : ControllerBase
@@ -35,7 +34,6 @@ namespace Test.Controllers
 
         // POST api/values
         [HttpPost]
-
         public void Post([FromBody] string value)
         {
             
